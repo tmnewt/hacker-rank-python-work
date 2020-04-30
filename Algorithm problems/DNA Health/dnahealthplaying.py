@@ -32,8 +32,8 @@ import platform
 # given each gene in genepool has an associated health value (see above)
 # given that a gene in the pool can reoccur with multiple values (see above)
 # retrieve the sum of the health of the dna string
-#           What about minimums?
-# find max health and min health of the dna string.
+#          
+# calculate the health value of the dna string.
 #
 
 

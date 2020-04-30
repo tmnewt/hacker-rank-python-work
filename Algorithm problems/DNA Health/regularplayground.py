@@ -22,3 +22,10 @@ test_dna = 'eoueoueeeieie'
 # 
 # 
 # 
+
+
+dna =  'eeeee'
+# e = 10
+matches = re.findall(r'e(?=e)', dna)
+
+print(matches)

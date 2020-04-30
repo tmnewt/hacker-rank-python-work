@@ -12,9 +12,9 @@ def healthDNA(gene_pool, start, end, dna):
         gene = gene_pool[i][0]
         x = None
         if len(gene) > 1:
-            x = re.compile(f'{gene[0]}(?={gene[1:]})')
+            x = re.compile(gene[0]+"(?="+gene[1:]+')')
         else:
-            x = re.compile(f'{gene}')
+            x = re.compile(gene)
         matches = len(re.findall(x, dna))
         total_health += matches*gene_pool[i][1]
     return total_health
@@ -50,7 +50,7 @@ for s_itr in range(s):
         minimum = result
     if result > maximum:
         maximum = result
-    if s_itr%100 = 0:
+    if s_itr%100 == 0:
         print(f'finished: {s_itr}')
 print(f'{minimum}, {maximum}')
 
