@@ -1,4 +1,5 @@
 import os
+import timeit
 
 nothing ='''
 Starting with a 1-indexed array of zeros and a list of operations, 
@@ -76,6 +77,7 @@ def arrayManipulation_Sum_Prefix(n: int, queries: list):
         k = query[2]
         arr[a] += k
         arr[b] = arr[b]-k
+        #print(arr)
     
     answer = prefixSum(arr)
     return answer
@@ -85,9 +87,11 @@ def prefixSum(arr):
     for i in range(len(arr)):
         arr[i] = running_sum + arr[i]
         running_sum = arr[i]
-        
+        #print(arr)
     
     return max(arr)
+
+
 
 os.chdir('Algorithm problems\\Data Structures')
 fp = open('arraymaniptest9.txt', 'r')
@@ -107,20 +111,41 @@ for s_itr in range(runs):
 test1_n = 10
 test1_query = [[1, 5, 3], [4, 8, 7], [6, 9, 1]]
 answer = 10
-print(arrayManipulation_Sum_Prefix(test1_n, test1_query))
+#print(arrayManipulation_Sum_Prefix(test1_n, test1_query))
 
 test2_n = 5
 test2_queries = [[2,3,603],[1,1,286],[4,4,882]]
 
-print(arrayManipulation_Sum_Prefix(test2_n, test2_queries))
+#print(arrayManipulation_Sum_Prefix(test2_n, test2_queries))
 
 print(arrayManipulation_Sum_Prefix(size, test_queries))
 
-test3_n = 5
-test3_queries = [[1,2,100], [2,5, 100], [3,4,100]]
+#test3_n = 5
+#test3_queries = [[1,2,100], [2,5, 100], [3,4,100]]
 
 
 
-print(arrayManipulation_Sum_Prefix(test3_n, test3_queries))
-print(arrayManipulation_Sum_Prefix(5, [[4,5,1]]))
-print(arrayManipulation_Sum_Prefix(5, [[1, 2, 2], [2, 5, 2]]))
+#print(arrayManipulation_Sum_Prefix(test3_n, test3_queries))
+#print(arrayManipulation_Sum_Prefix(5, [[4,5,1]]))
+#print(arrayManipulation_Sum_Prefix(5, [[1, 2, 2], [2, 5, 2]]))
+
+
+def arraymanip_solution(n, queries):
+    arr = [0 for _ in range(n+1)]
+    for query in queries:
+        a = query[0]-1
+        b = query[1]
+        k = query[2]
+        arr[a] += k
+        arr[b] = arr[b]-k
+        
+    max_prefix_sum = 0
+    prefix_sum = 0
+    for i in arr:
+        prefix_sum += i
+        if prefix_sum > max_prefix_sum:
+            max_prefix_sum = prefix_sum
+
+    return max_prefix_sum
+
+print(arraymanip_solution(size, test_queries))
