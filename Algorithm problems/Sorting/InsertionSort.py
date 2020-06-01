@@ -41,6 +41,18 @@ def insertionSort2(n: int, arr: list):
                     arr[j] = arr[j-1]
             print(' '.join(list(map(str, arr))))
 
+
+# smaller full fledged brute force algorithm (hacker rank solution):
+def insertionSortHR(l):
+    for i in range(1, len(l)):
+        j = i-1
+        key = l[i]
+        while (j >= 0) and (l[j] > key):
+           l[j+1] = l[j]
+           j -= 1
+        l[j+1] = key
+    return l
+
 #for k in range(3, -1, -1):
 #    print(k)
 
