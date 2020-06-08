@@ -1,3 +1,6 @@
+# https://www.hackerrank.com/challenges/picking-numbers/problem
+
+
 test = [1,1,2,2,4,4,5,5,5]  #answer = 5
 test2 = [4,6,5,3,3,1] # answer = 3
 test3 = [1,2,2,3,1,2] # answer = 5
