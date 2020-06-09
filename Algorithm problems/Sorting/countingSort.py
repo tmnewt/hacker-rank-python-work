@@ -35,7 +35,7 @@ test2 = [['0', 'ab'], [6,'cd'], [0, 'ef'], [6, 'gh'], [4, 'ij'], [0, 'ab'],
 [0, 'to'], [1, 'be'], [5, 'question'], [1, 'or'], [2, 'not'], [4, 'is'],
 [2, 'to'], [4, 'the']]
 
-def countSort(arr: list):
+def fullcountSort(arr: list):
     outs = [[] for _ in range(len(arr))]
     for i in range(len(arr)):
         arr[i][0] = int(arr[i][0]) 
@@ -45,7 +45,18 @@ def countSort(arr: list):
         outs[a[0]].append(a[1])
     return ' '.join(map(' '.join, outs)).strip()
 
-print(countSort(test2))
+print(fullcountSort(test2))
+
+def countingSort(arr):
+    counts = [ 0 for _ in range(len(arr))]
+    for i in arr:
+        counts[i] += 1
+    outs = []
+    for i in range(len(arr))):
+        if counts[i] > 0:
+            for _ in range(counts[i]):
+                outs.append(i)
+    return outs
 
 
 
