@@ -47,16 +47,6 @@ def fullcountSort(arr: list):
 
 print(fullcountSort(test2))
 
-def countingSort(arr):
-    counts = [ 0 for _ in range(len(arr))]
-    for i in arr:
-        counts[i] += 1
-    outs = []
-    for i in range(len(arr))):
-        if counts[i] > 0:
-            for _ in range(counts[i]):
-                outs.append(i)
-    return outs
 
 
 
