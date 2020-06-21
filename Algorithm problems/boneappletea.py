@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/bon-appetit/problem?h_r=internal-search
+
 test_bill = [3, 10, 2, 9]
 k_value = 1
 b_value = 7

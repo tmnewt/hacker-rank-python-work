@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/append-and-delete/problem?h_r=internal-search
+
 # s = original string
 # t = newstring
 # using only 2 operations (1. append to end  2. remove from end)

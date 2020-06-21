@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/cats-and-a-mouse/problem?h_r=internal-search
+
 # 1 dimension linear
 # 3 ints on the line. Line length under 100.
 # mouse can't move

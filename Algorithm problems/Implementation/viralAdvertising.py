@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/strange-advertising/problem?h_r=internal-search
+
 # each day floor(recipients/2) of the recipients will like the advertisement and will
 # share it with 3 friends on the following day. Assuming nobody receives the advertisement
 # twice, determine how many people have liked the ad by the end of a given day,

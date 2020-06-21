@@ -1,10 +1,12 @@
+# https://www.hackerrank.com/challenges/array-left-rotation/problem
+
 # left rotation
 # a left rotation on an array of size n shifts each of the array's 
 # elements 1 unit to the left.
 # 
 
-# should try this as though I had to no zero access 
-# to better functionality
+# should try this as though I had to zero access 
+# to pythons methods and functions...
 
 def leftrotation(ar: list, n: int):
     arr = ar

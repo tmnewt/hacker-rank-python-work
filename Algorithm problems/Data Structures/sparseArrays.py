@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/sparse-arrays/problem
+
 # return an integer array of the results of all queries in order.
 
 def matchingStrings(strings: list, queries: list):

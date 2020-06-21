@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/permutation-equation/problem?h_r=internal-search
+
 # given sequence of distinct integers
 # For each x where 1<= x <= n, find any int y such that p[p[y]] === x
 # 

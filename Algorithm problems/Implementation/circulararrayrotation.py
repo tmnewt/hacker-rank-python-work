@@ -1,3 +1,11 @@
+
+# Rightward rotation of array problem
+# https://www.hackerrank.com/challenges/circular-array-rotation/problem?h_r=internal-search
+
+# For leftward rotation:
+# https://www.hackerrank.com/challenges/ctci-array-left-rotation/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays
+
+
 def circularArrayRotation(a:list, k: int, queries: list):
     '''rotate array, a, by the last element rightward k times.
     return list of queried elements at their position.

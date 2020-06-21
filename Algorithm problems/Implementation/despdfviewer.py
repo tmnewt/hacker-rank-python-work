@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/designer-pdf-viewer/problem?h_r=internal-search
+
 def designerPdfViewer(h: list, word: str):
     base = len(word)
     abc = 'a b c d e f g h i j k l m n o p q r s t u v w x y z'.split()

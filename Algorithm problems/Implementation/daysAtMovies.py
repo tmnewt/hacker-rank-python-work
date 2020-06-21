@@ -1,3 +1,6 @@
+# https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem?h_r=internal-search
+
+
 # given a range of numbered days, [i...j] and a number k, determine 
 # the number of days in the range that are beautiful. 
 # Beautiful numbers are defined as nums where |i - reverse(i)| is evenly divisible by k

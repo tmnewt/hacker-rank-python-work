@@ -1,5 +1,7 @@
+# https://www.hackerrank.com/challenges/dynamic-array/problem
+
 # Dynamic Arrays (not dy nami carrs...)
-spam = '''Create a list, seqList, of N empty sequences, where each sequence is indexed from 0 to N-1. 
+spamtext = '''Create a list, seqList, of N empty sequences, where each sequence is indexed from 0 to N-1. 
 The elements within each of the sequences also use 0-indexing.
 
 Create an integer, lastAnswer, and initialize it to 0.

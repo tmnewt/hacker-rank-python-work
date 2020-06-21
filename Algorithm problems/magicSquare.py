@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/magic-square-forming/problem?h_r=internal-search
+
 # magic square is an n x n matrix of distinct positive
 # int from 1 to n^2 where the sum of any row, column, or
 # diagonal of length n is always equal to the same num.

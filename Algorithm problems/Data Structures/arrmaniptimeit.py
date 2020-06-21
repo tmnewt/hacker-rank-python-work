@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/crush/problem
+
 import os
 import time
 

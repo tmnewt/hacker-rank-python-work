@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/2d-array/problem
+
 # hour glass problem
 # return the largest hourglass.
 

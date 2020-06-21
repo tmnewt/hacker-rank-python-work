@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/electronics-shop/problem?h_r=internal-search
+
 # find the max amount to splurge on 2 different items 
 # without going over limit
 # print int result

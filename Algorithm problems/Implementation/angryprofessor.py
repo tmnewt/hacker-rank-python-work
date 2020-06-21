@@ -1,3 +1,6 @@
+# https://www.hackerrank.com/challenges/angry-professor/problem
+
+
 def angryProfessor(k: int, a: list):
     ontime = 0
     for i in a:

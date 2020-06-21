@@ -1,3 +1,4 @@
+# https://www.hackerrank.com/challenges/the-birthday-bar/problem?h_r=internal-search
 
 s = [1, 2, 1, 3, 2, 1, 2, 4, 2, 1] 
 d = 3

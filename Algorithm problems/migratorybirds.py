@@ -1,3 +1,6 @@
+# https://www.hackerrank.com/challenges/migratory-birds/problem?h_r=internal-search
+
+
 import timeit
 import numpy as np
 

@@ -1,3 +1,4 @@
+# https://www.hackerrank.com/challenges/day-of-the-programmer/problem?h_r=internal-search
 
 def dayOfProgrammer(year):
     base = 215 # 31 (Jan) + 31 (March) +30 (April) +31 (May) +30 (June) +31 (July) +31 (August)

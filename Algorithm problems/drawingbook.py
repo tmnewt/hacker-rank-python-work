@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/drawing-book/problem?h_r=internal-search
+
 # n = number of pages in a book
 # p = page to turn to.
 # return the minimum number of turns to reach the required page given that you can start from either the front or the back of the book.

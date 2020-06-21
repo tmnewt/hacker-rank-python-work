@@ -1,20 +1,6 @@
-# test cases failed:
-
-tests = []
-                                    # EXPECTED Output:
-tests.append('0 2 5 3')             # NO
-tests.append('21 6 47 3')           # NO
-tests.append('1817 9931 8417 190')  # NO
-tests.append('112 9563 8625 244')   # NO
-tests.append('2 3 94 2')            # YES
-tests.append('23 9867 9814 5861')   # NO
+# https://www.hackerrank.com/challenges/kangaroo/problem?h_r=internal-search
 
 
-
-start_1 = 21
-vel_1 = 6
-start_2 = 47
-vel_2 = 3
 
 def kangaroo(x1, v1, x2, v2):
     # find the positive value intersection of a given system
@@ -34,7 +20,14 @@ def kangaroo(x1, v1, x2, v2):
         return 'NO'
      
      
-
+tests = []
+                                    # EXPECTED Output:
+tests.append('0 2 5 3')             # NO
+tests.append('21 6 47 3')           # NO
+tests.append('1817 9931 8417 190')  # NO
+tests.append('112 9563 8625 244')   # NO
+tests.append('2 3 94 2')            # YES
+tests.append('23 9867 9814 5861')   # NO
     
 for test in tests:
     arguments = test.split()

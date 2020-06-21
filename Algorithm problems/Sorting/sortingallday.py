@@ -1,3 +1,8 @@
+# file for my amusement.
+# Its interesting to see what it would require to create from scratch 
+# sorting algorithms. Not that I could do better. But at least I know how
+# they work.
+
 import os
 import time
 
