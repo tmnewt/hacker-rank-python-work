@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/time-conversion/problem
+
 s = '11:05:22AM'
 h = s[:2]
 mm_ss = s[3:8]

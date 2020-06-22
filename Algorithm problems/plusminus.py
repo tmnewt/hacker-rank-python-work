@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/plus-minus/problem?h_r=internal-search
+
 arr = [-4, 3, -9, 0, 4, 1]
 
 # find array length

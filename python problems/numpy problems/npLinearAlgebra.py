@@ -1,3 +1,6 @@
+# https://www.hackerrank.com/challenges/np-linear-algebra/problem?h_r=internal-search
+
+# read the challenge before running...
 import numpy as np
 np.set_printoptions(legacy='1.13')
 

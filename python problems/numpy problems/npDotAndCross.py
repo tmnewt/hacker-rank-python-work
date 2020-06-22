@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/np-dot-and-cross/problem?h_r=internal-search
+
 import numpy as np
 
 n = int(input())

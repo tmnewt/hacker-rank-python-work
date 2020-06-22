@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/string-validators/problem?h_r=internal-search
+
 def stringValidator(s: str):
     s = list(s)
     # has

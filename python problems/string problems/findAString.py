@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/find-a-string/problem?h_r=internal-search
+
 test = 'aracecarisintheracedrivenbyaracerwhomightwintheracecarcup'
 st = 'race'
 

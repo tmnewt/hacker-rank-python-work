@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/staircase/problem?h_r=internal-search
+
    #
   ##
  ###
@@ -15,6 +17,3 @@ for i in range(n+1):
         step = ' '*(n-i)
         step += '#'*i
         print(step)
-
-
-

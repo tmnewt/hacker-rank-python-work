@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/text-wrap/problem?h_r=internal-search
+
 test = "ABCDEFGHIJKLIMNOQRSTUVWXYZ"
 
 def wrap(s, max_w):

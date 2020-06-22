@@ -1,3 +1,30 @@
+# https://www.hackerrank.com/challenges/sock-merchant/problem?h_r=internal-search
+
+# submission
+
+def sockMerchant(n, ar):
+    pair = 0
+    trigger = True
+    while trigger:
+        for i in range(len(ar)):
+            if i == len(ar)-1:
+                ar.pop()
+                break
+            
+            if ar[-1] == ar[i]:
+                ar.remove(ar[i])
+                ar.pop()
+                pair += 1
+                break
+            
+        if (len(ar) == 1) or (len(ar) == 0):
+            trigger = False
+    return pair
+
+
+
+# i don't remember writing any of this...
+
 #matching and removing
 #[1, 1, 2, 1, 2, 1, 1, 4, 4]
 # i = 0   j = 1  
@@ -103,29 +130,31 @@ arr_test3 = list(map(int, arr_load3.rstrip().split()))
 #
 ##print(sockMerchantlog(arr_test3))
 #
-def newsockMerchant(n, ar):
-    pair = 0
-    trigger = True
-    while trigger:
-        print(f'current array is {ar} with length of {len(ar)} and ending value of {ar[-1]}')
-        for i in range(len(ar)):
-            print(f'current i is: {i}')
-            if i == len(ar)-1:
-                ar.pop()
-                break
-            
-            if ar[-1] == ar[i]:
-                print(f'found match ')
-                ar.remove(ar[i])
-                ar.pop()
-                pair += 1
-                break
-            
-        if (len(ar) == 1) or (len(ar) == 0):
-            trigger = False
-    return pair
 
-
-
-print(newsockMerchant(15, arr_test3))
-
+##
+#def newsockMerchant(n, ar):
+#    pair = 0
+#    trigger = True
+#    while trigger:
+#        print(f'current array is {ar} with length of {len(ar)} and ending value of {ar[-1]}')
+#        for i in range(len(ar)):
+#            print(f'current i is: {i}')
+#            if i == len(ar)-1:
+#                ar.pop()
+#                break
+#            
+#            if ar[-1] == ar[i]:
+#                print(f'found match ')
+#                ar.remove(ar[i])
+#                ar.pop()
+#                pair += 1
+#                break
+#            
+#        if (len(ar) == 1) or (len(ar) == 0):
+#            trigger = False
+#    return pair
+#
+#
+#
+#print(newsockMerchant(15, arr_test3))
+#
