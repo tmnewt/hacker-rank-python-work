@@ -16,38 +16,34 @@ def receivedText(s):
     home = False  # true if the home button has been hit. stays true until end is hit
     appendix = 0
     for i in s:
-        if i == '#':
-            numlock = not numlock
-            print(f'numlock is now {numlock}')
+        if i == '#': numlock = not numlock
+            # print(f'numlock is now {numlock}')
 
         elif i == '<':
-            print('move to front')
+            # print('move to front')
             home = True
             appendix = 0
             
-        elif i == '>':
-            print('move to back')
-            home = False
+        elif i == '>': home = False
+            # print('move to back')
             
         elif i == '*':
             try:
                 if home:
-                    if appendix == 0: pass
-                    else:
+                    if appendix != 0:
                         result.pop(appendix-1)
                         appendix -= 1
-                else:
-                    print('deleting from end')
-                    result.pop()
+                else: result.pop()
+                    # print('deleting from end')
             except: pass
 
         elif (numlock == True) and (i in digits):
             if home:
-                print(f'appending digit to {appendix}')
+                # print(f'appending digit to {appendix}')
                 result.insert(appendix, i)
                 appendix += 1
             else:             
-                print(f'appending digit to end')
+                # print(f'appending digit to end')
                 result.append(i)
 
         elif i not in digits:
@@ -57,7 +53,7 @@ def receivedText(s):
             else:
                 result.append(i)
 
-        print(''.join(result))
+        #print(''.join(result))
     
     return ''.join(result)
             
