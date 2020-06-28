@@ -12,7 +12,7 @@
 
 # if none are linked then the minimum is always n - 1 
 
-import numpy as np
+# import numpy as np
 
 def getMinConnectionChange(connections: list):
     if len(connections) == 0:
@@ -37,8 +37,17 @@ def getMinConnectionChange(connections: list):
             memo[current] = startIndex
             current = pointer
             pointer = connections[current] - 1
-        
-    return compCount-1
+
+    catch = False
+    for i in range(len(connections)):
+        if (i+1) == connections[i]:
+            catch = True
+            break
+    
+    if catch == True:
+        return compCount-1
+
+    return compCount
 
 def getMinConnectionChangeText(connections: list):
     # I think the best approach here is to identify components and then the solution will be c-1 
@@ -67,9 +76,17 @@ def getMinConnectionChangeText(connections: list):
             memo[current] = startIndex
             current = pointer
             pointer = connections[current] - 1
-        
-    return compCount-1
-
+    
+    catch = False
+    for i in range(len(connections)):
+        if (i+1) == connections[i]:
+            catch = True
+            break
+    
+    if catch == True:
+        return compCount-1
+    
+    return compCount
 
 
 #index=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,  23]
@@ -77,11 +94,25 @@ test = [2, 1, 4, 5, 5, 7, 8, 9, 10, 9, 15, 15, 15, 15, 15, 15, 15, 15, 15, 21, 2
 # comps [ 1 ] [   2  ] [     3,      ] [                4                ] [    5    ]  [4] [6]
 # 5 components in the above test. 
 
-test = list(np.random.randint(1, 300000, 300000))
-print(getMinConnectionChange(test))
+#test = list(np.random.randint(1, 300000, 300000))
+#print(getMinConnectionChange(test))
 
-blob = [n+1 for n in range(10)]
-print(blob)
-print(getMinConnectionChangeText(blob))
+#blob = [n+1 for n in range(10)]
+#print(blob)
+#print(getMinConnectionChangeText(blob))
 
-print(getMinConnectionChange([1,2,3]))
+#print(getMinConnectionChange([1,2,3]))
+
+# print(getMinConnectionChangeText(test))
+# 
+# 
+# catch = False
+# for i in range(len(test)):
+#     if (i+1) == test[i]:
+#         catch = True
+#         break
+# 
+# print(catch)
+
+print(getMinConnectionChange([2,3,4,1,5]))
+
