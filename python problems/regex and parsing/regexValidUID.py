@@ -1,8 +1,8 @@
-# https://www.hackerrank.com/challenges/introduction-to-regex/problem
+# https://www.hackerrank.com/challenges/validating-uid/problem
 
 import re
 
-expr = re.compile(r'^(?:(\d)(?!.*\1)){3,}(?:([A-Z])(?!.*\2)){2,}[a-z]{0,5}$')
+expr = re.compile(r'^(?:(\d)(?!.*\1)){3,}(?:([A-Z])(?!.*\2)){2,}(?:([a-z])(?!.*\3)){0,5}$')
 for _ in range(int(input())):
     s = input()
     if len(s) != 10:
@@ -204,14 +204,17 @@ hdC18gwNYN
 W5IGfSHj87
 '''
 
-print(test)
-
+count = 1
 for s in test.splitlines():
     if len(s) != 10:
-        print('Invalid')
+        print(f'Line {count} Invalid')
     else:
         s = ''.join(sorted(s))
         if re.match(expr, s) == None:
-            print('Invalid')
+            print(f'Line {count} Invalid')
         else:
-            print('Valid')
+            print(f'Line {count} Valid {s}')
+    count +=1
+
+#for s in test.splitlines():
+#    print(''.join(sorted(s)))
