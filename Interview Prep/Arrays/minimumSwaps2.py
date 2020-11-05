@@ -44,7 +44,6 @@ import time
 
 def minimumSwaps(arr):
     swaps = 0
-    memo = None
     for i, value in enumerate(arr):
         while (i+1) != value:
             arr[i], arr[value-1], = arr[value-1], arr[i]
