@@ -1,10 +1,7 @@
 #!/bin/python3
 import os
 import re
-
-class DNAHealth:
-    def __init__(self, genes, health, tests)
-        
+     
 
 def describe_gene_pool(genes, health):
     return list(tuple(zip(genes, health)))
