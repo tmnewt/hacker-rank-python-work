@@ -55,3 +55,8 @@ for s_itr in range(s):
 print(f'{minimum}, {maximum}')
 
 
+
+
+#   gene pool: [abcd, a, ab, ac, ad, bc, cd, a, bb, bcd, abcd, aaaa, aa, a, aab, aba]
+#   health   : [ 11,  3, 4,  5,  1,  20,  0, 6, 13,  15,  56,   99,  38, 45, 1,   8 ]
+# setup check: [ x    x  x   x   x   x       x   x   x    x     x     x  x   x    x ]
