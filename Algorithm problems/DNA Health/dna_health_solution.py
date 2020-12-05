@@ -109,6 +109,7 @@ example = {
 #   
 #   Repeat this whole process.
 #
+#   However, this can be sped up.
 #
 # On the other hand it should be possible to make a single pass
 #   without back tracking at all.
@@ -163,9 +164,13 @@ example = {
 
 
 
-def healthDNA(health_tree, start, end, dna):
+def healthDNA(health_tree, regular_dictionary, start, end, dna):
     total_health = 0
+
+
     dyn_dictionary_list = []
+
+
     for char in dna:
         temp_dictionary_list = []
         for dict_item in dyn_dictionary_list:
@@ -197,9 +202,20 @@ def sum_ends(end_dict:dict, start, stop):
 
 def build_health_tree(genes, health_values):
     gene_pool = list(tuple(zip(genes, health_values)))
+    uniform = True
+    uniform_len = len(gene_pool[0][0])
+    regular_dictionary = {}
     health_tree = {}
     for i, gene_health in enumerate(gene_pool):
         gene, health = gene_health
+        if uniform_len != len(gene):
+            uniform = False
+        try:
+            regular_dictionary[gene][i] = int(health)
+        except KeyError:
+            regular_dictionary[gene] = {
+                i: int(health)
+            }
         dic = health_tree
         while gene:
             ch = gene[0]
@@ -216,7 +232,8 @@ def build_health_tree(genes, health_values):
     
     #print(gene_pool)
     #print(json.dumps(health_tree, indent=3))
-    return health_tree
+    print('done with health tree')
+    return health_tree, regular_dictionary, uniform
 
 
 
@@ -228,7 +245,7 @@ def run_test(test_file):
     genes = lines[1].rstrip().split()
     healths = list(map(int, lines[2].rstrip().split()))
     
-    health_tree = build_health_tree(genes, healths)
+    health_tree, reg_dict, uniform_bool = build_health_tree(genes, healths)
 
     s = int(lines[3])
 
@@ -244,7 +261,7 @@ def run_test(test_file):
 
         dna = firstLastd[2]
 
-        result = healthDNA(health_tree, first, last, dna)
+        result = healthDNA(health_tree, reg_dict, first, last, dna)
         
         if minimum == None:
             minimum = result
@@ -271,6 +288,3 @@ run_test('test13.txt')
 #test_genes = 'abcd a ab ac ad bc cd a bb bcd abcd aaaa aa a aab aba'.split()
 #healths = map(int, '11 3 4 5 1 20 0 6 13 15 56 99 38 45 1 8'.split())
 #build_health_tree(test_genes, healths)
-
-
-
