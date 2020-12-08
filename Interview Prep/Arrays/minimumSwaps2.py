@@ -40,7 +40,6 @@
 # aaaaaahhhh this is hard to demonstarte without graphs!!! The answer to this part is 5. It's always 1 less than the remaining number of unsorted values.
 
 import numpy as np
-import time
 
 def minimumSwaps(arr):
     swaps = 0
